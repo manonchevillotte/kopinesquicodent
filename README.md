@@ -1,1 +1,2 @@
 # kopinesquicodent
+# COPYRIGHT
