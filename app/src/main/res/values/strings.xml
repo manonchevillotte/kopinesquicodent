@@ -9,5 +9,9 @@
     <string name="title_oxymeter">Oxymètre</string>
     <string name="title_blood_pressure">Tension</string>
     <string name="title_scale">Balance</string>
-    <string name="main_title">Mes dernières mesures :</string>
+    <string name="main_title_2">Voici vos dernières mesures : </string>
+    <string name="main_title_1">Bonjour</string>
+    <string name="weight_unit">Kg</string>
+    <string name="IBM_string">Votre IMC :</string>
+    <string name="weight_string">Votre poids :</string>
 </resources>

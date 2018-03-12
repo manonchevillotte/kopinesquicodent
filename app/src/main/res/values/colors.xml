@@ -3,4 +3,5 @@
     <color name="colorPrimary">#DADADA</color>
     <color name="colorPrimaryDark">#303030</color>
     <color name="colorAccent">#101010</color>
+    <color name="good_IBM_color">#27ae60</color>
 </resources>
