@@ -5,4 +5,9 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="profile_pseudo">Pseudo</string>
+    <string name="title_oxymeter">Oxymètre</string>
+    <string name="title_blood_pressure">Tension</string>
+    <string name="title_scale">Balance</string>
+    <string name="main_title">Mes dernières mesures :</string>
 </resources>
