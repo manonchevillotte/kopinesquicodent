@@ -14,4 +14,5 @@
     <string name="weight_unit">Kg</string>
     <string name="IBM_string">Votre IMC :</string>
     <string name="weight_string">Votre poids :</string>
+    <string name="title_Home">Accueil</string>
 </resources>

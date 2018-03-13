@@ -3,7 +3,11 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_Oxygen"
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/title_Home" />
+        <item
+            android:id="@+id/nav_oxygen"
             android:icon="@drawable/ic_water_percent"
             android:title="@string/title_oxymeter" />
         <item
