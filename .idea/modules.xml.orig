@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/kopinesquicodent.iml" filepath="$PROJECT_DIR$/kopinesquicodent.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Kopinesquicodent.iml" filepath="$PROJECT_DIR$/Kopinesquicodent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+>>>>>>> 1dc5d867073f6e13c196ec54cfcb58975383f42c
     </modules>
   </component>
 </project>
