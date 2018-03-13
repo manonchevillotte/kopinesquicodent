@@ -3,34 +3,30 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_Oxygen"
+            android:icon="@drawable/ic_water_percent"
+            android:title="@string/title_oxymeter" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_blood_pressure"
+            android:icon="@drawable/ic_heart_box_outline"
+            android:title="@string/title_blood_pressure" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_weight"
+            android:icon="@drawable/ic_weight_kilogram"
+            android:title="@string/title_scale" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+
+       <item android:title="@string/action_settings">
+           <menu>
+               <item
+                   android:id="@+id/nav_setting"
+                   android:icon="@drawable/ic_settings_black_24dp"
+                   android:title="@string/action_settings">
+               </item>
+           </menu>
+
+       </item>
+
 
 </menu>
