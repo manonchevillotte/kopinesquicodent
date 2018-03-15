@@ -16,7 +16,7 @@
     >
 
     <TextView
-        android:id="@+id/profile_pseudo_main_greeting"
+        android:id="@+id/profile_pseudo_main_greeting_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
@@ -49,10 +49,10 @@
             android:layout_marginTop="10dp">
 
             <TextView
-                android:id="@+id/weight_unitTextView"
+                android:id="@+id/weight_unitTextView_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/weight"
+                android:layout_alignBottom="@id/weight_main"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:paddingEnd="10dp"
@@ -61,29 +61,29 @@
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/weight"
+                android:id="@+id/weight_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
-                android:layout_toStartOf="@+id/weight_unitTextView"
+                android:layout_toStartOf="@+id/weight_unitTextView_main"
                 android:text="100"
                 android:textSize="48sp" />
 
             <TextView
-                android:id="@+id/weight_TxtView"
+                android:id="@+id/weight_TxtView_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toStartOf="@+id/weight"
+                android:layout_toStartOf="@+id/weight_main"
                 android:paddingEnd="5dp"
                 android:text="@string/weight_string" />
 
             <TextView
-                android:id="@+id/imc_Value_TxtView"
+                android:id="@+id/imc_Value_TxtView_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toStartOf="@+id/weight_TxtView"
+                android:layout_toStartOf="@+id/weight_TxtView_main"
                 android:paddingEnd="15dp"
                 android:paddingStart="15dp"
                 android:text="20"
@@ -91,14 +91,14 @@
                 android:textSize="36sp" />
 
             <TextView
-                android:id="@+id/imc_TxtView"
+                android:id="@+id/imc_TxtView_main"
                 style="@style/ThemeOverlay.AppCompat.ActionBar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/weight_TxtView"
-                android:layout_alignBottom="@+id/weight_TxtView"
+                android:layout_alignBaseline="@+id/weight_TxtView_main"
+                android:layout_alignBottom="@+id/weight_TxtView_main"
                 android:layout_centerVertical="true"
-                android:layout_toStartOf="@+id/imc_Value_TxtView"
+                android:layout_toStartOf="@+id/imc_Value_TxtView_main"
                 android:text="@string/IBM_string" />
 
         </RelativeLayout>
@@ -138,7 +138,7 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/bp_sys_val_parent"
+                android:id="@+id/bp_sys_val_parent_main"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -150,7 +150,7 @@
                     android:layout_alignParentEnd="true"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/bp_sys_val"
+                        android:id="@+id/bp_sys_val_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="145"
@@ -189,7 +189,7 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/bp_dya_val_parent"
+                android:id="@+id/bp_dya_val_parent_main"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -201,7 +201,7 @@
                     android:layout_alignParentEnd="true"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/bp_dya_val"
+                        android:id="@+id/bp_dya_val_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="87"
@@ -240,7 +240,7 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/bp_pulse_val_parent"
+                android:id="@+id/bp_pulse_val_parent_main"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -252,7 +252,7 @@
                     android:layout_alignParentEnd="true"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/bp_pulse_val"
+                        android:id="@+id/bp_pulse_val_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="63"
@@ -307,7 +307,7 @@
             </LinearLayout>
 
             <RelativeLayout
-                android:id="@+id/oxi_rate_val_parent"
+                android:id="@+id/oxi_rate_val_parent_main"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -319,7 +319,7 @@
                     android:layout_alignParentEnd="true"
                     android:orientation="horizontal">
                     <TextView
-                        android:id="@+id/oxi_rate_val"
+                        android:id="@+id/oxi_rate_val_main"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="98"
