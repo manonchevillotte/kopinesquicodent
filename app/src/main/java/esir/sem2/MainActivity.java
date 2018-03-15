@@ -16,6 +16,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -46,8 +47,11 @@ public class MainActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+               Snackbar.make(view, "Mise à jour des données", Snackbar.LENGTH_SHORT)
                         .setAction("Action", null).show();
+                //Toast.makeText(getApplicationContext(),"Mise à jour des données en cours", Toast.LENGTH_SHORT).show();
+                initData();
+                updateInterface();
             }
         });
 
