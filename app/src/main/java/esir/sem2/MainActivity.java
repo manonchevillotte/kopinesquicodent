@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_oxygen) {
-            activity = new Intent(MainActivity.this,OxymeterActivity.class);
+            activity = new Intent(MainActivity.this,OximeterActivity.class);
             startActivity(activity);
         } else if (id == R.id.nav_blood_pressure) {
 

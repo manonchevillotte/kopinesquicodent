@@ -10,12 +10,12 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class OxymeterActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class OximeterActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_oxymeter);
+        setContentView(R.layout.activity_oximeter);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_oxymeter);
         setSupportActionBar(toolbar);
 
@@ -37,7 +37,7 @@ public class OxymeterActivity extends AppCompatActivity implements NavigationVie
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            activity = new Intent(OxymeterActivity.this,MainActivity.class);
+            activity = new Intent(OximeterActivity.this,MainActivity.class);
             startActivity(activity);
         } else if (id == R.id.nav_blood_pressure) {
 

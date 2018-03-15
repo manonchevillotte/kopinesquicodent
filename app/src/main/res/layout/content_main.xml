@@ -28,61 +28,316 @@
         android:textSize="18sp"
         android:text="@string/main_title_2"
         android:paddingBottom="5dp"/>
-    <RelativeLayout
+
+    <!-- Balance part Interface -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/window_shape"
+        android:orientation="vertical"
+        android:padding="10dp">
 
         <TextView
-            android:id="@+id/weight_unitTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/weight_unit"
-            android:layout_alignBottom="@id/weight"
-            android:textSize="18sp"
-            android:layout_alignParentEnd="true"/>
+            android:text="@string/title_scale" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/weight_unitTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/weight"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:paddingEnd="10dp"
+                android:paddingStart="10dp"
+                android:text="@string/weight_unit"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toStartOf="@+id/weight_unitTextView"
+                android:text="100"
+                android:textSize="48sp" />
+
+            <TextView
+                android:id="@+id/weight_TxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/weight"
+                android:paddingEnd="5dp"
+                android:text="@string/weight_string" />
+
+            <TextView
+                android:id="@+id/imc_Value_TxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/weight_TxtView"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:text="20"
+                android:textColor="@color/nephritis_green_color"
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/imc_TxtView"
+                style="@style/ThemeOverlay.AppCompat.ActionBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/weight_TxtView"
+                android:layout_alignBottom="@+id/weight_TxtView"
+                android:layout_centerVertical="true"
+                android:layout_toStartOf="@+id/imc_Value_TxtView"
+                android:text="@string/IBM_string" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- Blood pressure Part Interface -->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/window_shape"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_blood_pressure"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="@string/blood_pressure_sys_reduce"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bp_sys_val_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/bp_sys_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="145"
+                        android:textSize="36sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:text="mmHg"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="@string/blood_pressure_dya_reduce"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bp_dya_val_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/bp_dya_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="87"
+                        android:textSize="36sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:text="mmHg"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:text="@string/blood_pressure_pulse"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bp_pulse_val_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/bp_pulse_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="63"
+                        android:textSize="36sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:text="BPM"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!-- Oximeter Part Interface -->
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/window_shape"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
 
         <TextView
-            android:id="@+id/weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/weight_unitTextView"
-            android:paddingEnd="5dp"
-            android:text="100"
-            android:textSize="48sp" />
-
-        <TextView
-            android:id="@+id/weight_TxtView"
-            android:layout_width="wrap_content"
+            android:text="@string/title_oximeter"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/imc_TxtView"
-            android:layout_alignBottom="@+id/imc_TxtView"
-            android:layout_toStartOf="@+id/weight"
-            android:paddingRight="5dp"
-            android:text="@string/weight_string" />
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/oxygen_rate"/>
 
-        <TextView
-            android:id="@+id/imc_Value_TxtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/weight_unitTextView"
-            android:layout_alignBottom="@+id/weight_unitTextView"
-            android:layout_toStartOf="@+id/weight_TxtView"
-            android:paddingStart="5dp"
-            android:text="20"
-            android:textColor="@color/good_IBM_color"
-            android:textSize="36sp"
-            android:paddingRight="15dp"/>
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/imc_TxtView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/weight_unitTextView"
-            android:layout_marginEnd="18dp"
-            android:layout_toStartOf="@+id/imc_Value_TxtView"
-            android:text="@string/IBM_string" />
+            <RelativeLayout
+                android:id="@+id/oxi_rate_val_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
 
-    </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/oxi_rate_val"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="98"
+                        android:textSize="36sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:text="%"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
 </LinearLayout>
