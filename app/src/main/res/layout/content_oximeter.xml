@@ -1,38 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:aplot="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="esir.sem2.OximeterActivity"
     android:orientation="vertical"
-    android:weightSum="3">
+    android:weightSum="30"
+    tools:context="esir.sem2.OximeterActivity">
 
     <com.androidplot.xy.XYPlot
-        style="@style/FullScreenGraph.Minimalist.Light"
         android:id="@+id/plot"
+        style="@style/FullScreenGraph.Minimalist.Light"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        aplot:graphBackgroundColor="@color/ap_white"
+        android:layout_weight="20"
         aplot:backgroundColor="@color/ap_white"
         aplot:borderColor="@color/ap_charcoal"
-        aplot:title="Évolution"
-        aplot:lineLabels="left|bottom"
+        aplot:graphBackgroundColor="@color/ap_white"
         aplot:lineLabelRotationBottom="-45"
-        android:layout_weight="2"/>
+        aplot:lineLabels="left|bottom"
+        aplot:title="Évolution" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1">
-        <TextView
-            android:id="@+id/editText"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:text="Name"
+            android:layout_weight="1"
+            android:text="@string/plot_year_sel" />
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/plot_month_sel" />
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/plot_week_sel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@drawable/window_shape"
+        android:padding="10dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dernieremesure_text"
             />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="@string/oxygen_rate"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/oxi_rate_val_parent_main"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/oxi_rate_val_main"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/nephritis_green_color"
+                        android:text="98"
+                        android:textSize="36sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="5dp"
+                        android:text="%"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
 
     </LinearLayout>
 

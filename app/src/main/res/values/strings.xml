@@ -19,4 +19,11 @@
     <string name="blood_pressure_dya_reduce">Dya</string>
     <string name="blood_pressure_pulse">Pouls</string>
     <string name="oxygen_rate">Taux d\'oxygène</string>
+
+    <string name="plot_year_sel">Année</string>
+    <string name="plot_month_sel">Mois</string>
+    <string name="plot_week_sel">Semaine</string>
+    <string name="dernieremesure_text">Denière mesure :</string>
+
+
 </resources>
