@@ -46,7 +46,8 @@ public class BMIActivity extends AppCompatActivity implements NavigationView.OnN
             activity = new Intent(BMIActivity.this,OximeterActivity.class);
             startActivity(activity);
         } else if (id == R.id.nav_setting) {
-
+            Intent profileActivity = new Intent(BMIActivity.this,ProfileActivity.class);
+            startActivity(profileActivity);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
