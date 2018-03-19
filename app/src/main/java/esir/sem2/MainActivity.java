@@ -1,11 +1,9 @@
 package esir.sem2;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.v4.content.res.ResourcesCompat;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,7 +14,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -24,17 +21,21 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private double mWeight;
-    private double mIBM;
+    private double mBMI;
     private int mBdSys;
     private int mBdDya;
     private int mPulse;
     private int mOxygenRate;
-    private TextView mIBMTxtView;
+    private TextView mBMITxtView;
     private TextView mBdDyaTxtView;
     private TextView mBdSysTxtView;
     private TextView mPulseTxtView;
     private TextView mWeightTxtView;
     private TextView mOxygenRateTxtView;
+    private String mUserGreetings;
+    private TextView mUserGreetingsTxtView;
+    private TextView mDateRefreshTxtView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        mUserGreetingsTxtView = findViewById(R.id.profile_pseudo_main_greeting_main);
+        mBMITxtView = findViewById(R.id.imc_Value_TxtView_main);
+        mBdDyaTxtView = findViewById(R.id.bp_dya_val_main);
+        mBdSysTxtView = findViewById(R.id.bp_sys_val_main);
+        mPulseTxtView = findViewById(R.id.bp_pulse_val_main);
+        mWeightTxtView = findViewById(R.id.weight_main);
+        mOxygenRateTxtView = findViewById(R.id.oxi_rate_val_main);
+        mDateRefreshTxtView = findViewById(R.id.date_refresh_main);
     }
 
 
@@ -70,23 +81,17 @@ public class MainActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
         mWeight = 76;
-        mIBM = 20.75;
+        mBMI = 20.75;
         mBdSys = 145;
         mBdDya = 87;
         mPulse = 63;
         mOxygenRate = 98;
-        mIBMTxtView = findViewById(R.id.imc_Value_TxtView_main);
-        mBdDyaTxtView = findViewById(R.id.bp_dya_val_main);
-        mBdSysTxtView = findViewById(R.id.bp_sys_val_main);
-        mPulseTxtView = findViewById(R.id.bp_pulse_val_main);
-        mWeightTxtView = findViewById(R.id.weight_main);
-        mOxygenRateTxtView = findViewById(R.id.oxi_rate_val_main);
         initData();
         updateInterface();
     }
 
     private void initData() {
-
+        mUserGreetings = "Bonjour "+getResources().getText(R.string.profile_pseudo)+',';
     }
 
     private void updateInterface() {
@@ -99,15 +104,17 @@ public class MainActivity extends AppCompatActivity
 
         mPulseTxtView.setText(String.valueOf(mPulse));
 
-        mIBMTxtView.setText(numberFormat.format(mIBM));
+        mBMITxtView.setText(numberFormat.format(mBMI));
         mOxygenRateTxtView.setText(String.valueOf(mOxygenRate));
 
-        if (mIBM <= 16.5 || mIBM >= 30){
-            mIBMTxtView.setTextColor(getResources().getColor(R.color.alizarin_red_color));
-        } else if (mIBM <= 18.5 || mIBM >= 25){
-            mIBMTxtView.setTextColor(getResources().getColor(R.color.orange_orange_color));
+        mUserGreetingsTxtView.setText(mUserGreetings);
+
+        if (mBMI <= 16.5 || mBMI >= 30){
+            mBMITxtView.setTextColor(getResources().getColor(R.color.alizarin_red_color));
+        } else if (mBMI <= 18.5 || mBMI >= 25){
+            mBMITxtView.setTextColor(getResources().getColor(R.color.orange_orange_color));
         } else {
-            mIBMTxtView.setTextColor(getResources().getColor(R.color.nephritis_green_color));
+            mBMITxtView.setTextColor(getResources().getColor(R.color.nephritis_green_color));
         }
 
     }
@@ -138,6 +145,8 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent profileActivity = new Intent(MainActivity.this,ProfileActivity.class);
+            startActivity(profileActivity);
             return true;
         }
 
@@ -158,7 +167,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_weight) {
 
         } else if (id == R.id.nav_setting) {
-
+            Intent profileActivity = new Intent(MainActivity.this,ProfileActivity.class);
+            startActivity(profileActivity);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
