@@ -25,7 +25,7 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.androidplot:androidplot-core:1.5.4'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
     testCompile 'junit:junit:4.12'

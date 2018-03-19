@@ -25,11 +25,16 @@
             android:name=".ProfileActivity"
             android:label="@string/profile_pseudo"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"/>
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="esir.sem2.MainActivity" />
-        </activity>
-    </application>
+        <activity
+            android:name=".BMIActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".TensionActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    ></application>
 
 </manifest>

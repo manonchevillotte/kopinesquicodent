@@ -163,9 +163,11 @@ public class MainActivity extends AppCompatActivity
             activity = new Intent(MainActivity.this,OximeterActivity.class);
             startActivity(activity);
         } else if (id == R.id.nav_blood_pressure) {
-
+            activity = new Intent(MainActivity.this,TensionActivity.class);
+            startActivity(activity);
         } else if (id == R.id.nav_weight) {
-
+            activity = new Intent(MainActivity.this,BMIActivity.class);
+            startActivity(activity);
         } else if (id == R.id.nav_setting) {
             Intent profileActivity = new Intent(MainActivity.this,ProfileActivity.class);
             startActivity(profileActivity);

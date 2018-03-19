@@ -10,13 +10,13 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class OximeterActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class BMIActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_oximeter);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_oxymeter);
+        setContentView(R.layout.activity_bmi);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_bmi);
         setSupportActionBar(toolbar);
 
 
@@ -37,14 +37,14 @@ public class OximeterActivity extends AppCompatActivity implements NavigationVie
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            activity = new Intent(OximeterActivity.this,MainActivity.class);
+            activity = new Intent(BMIActivity.this,MainActivity.class);
             startActivity(activity);
         } else if (id == R.id.nav_blood_pressure) {
-            activity = new Intent(OximeterActivity.this,TensionActivity.class);
+            activity = new Intent(BMIActivity.this,TensionActivity.class);
             startActivity(activity);
-        } else if (id == R.id.nav_weight) {
-                activity = new Intent(OximeterActivity.this,BMIActivity.class);
-                startActivity(activity);
+        } else if (id == R.id.nav_oxygen) {
+            activity = new Intent(BMIActivity.this,OximeterActivity.class);
+            startActivity(activity);
         } else if (id == R.id.nav_setting) {
 
         }
