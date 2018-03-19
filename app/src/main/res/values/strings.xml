@@ -7,6 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="profile_pseudo">Pseudo</string>
     <string name="title_oximeter">Oxymètre</string>
+    <string name="title_bmi">Indice de Masse Corporelle (IMC)</string>
     <string name="title_blood_pressure">Tension Artérielle</string>
     <string name="title_scale">Balance</string>
     <string name="main_title_2">Voici vos dernières mesures : </string>

@@ -156,7 +156,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_blood_pressure) {
 
         } else if (id == R.id.nav_weight) {
-
+            activity = new Intent(MainActivity.this,BMIActivity.class);
+            startActivity(activity);
         } else if (id == R.id.nav_setting) {
 
         }
