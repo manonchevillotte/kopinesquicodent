@@ -46,6 +46,8 @@ public class TensionActivity extends AppCompatActivity implements NavigationView
             activity = new Intent(TensionActivity.this, BMIActivity.class);
             startActivity(activity);
         } else if (id == R.id.nav_setting) {
+            activity = new Intent(TensionActivity.this, ProfileActivity.class);
+            startActivity(activity);
 
         }
 
