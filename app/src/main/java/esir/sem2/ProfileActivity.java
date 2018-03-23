@@ -6,7 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.ViewSwitcher;
 
 public class ProfileActivity extends AppCompatActivity {
@@ -39,6 +41,24 @@ public class ProfileActivity extends AppCompatActivity {
                 editProfileValues();
             }
         });
+
+        Spinner athleticSpinner = (Spinner) findViewById(R.id.athletic_value_profile);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> athleticAdapter = ArrayAdapter.createFromResource(this,
+                R.array.athletics_value_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        athleticAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        athleticSpinner.setAdapter(athleticAdapter);
+
+        Spinner genderSpinner = (Spinner) findViewById(R.id.gender_value_profile);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,
+                R.array.gender_value_array, android.R.layout.simple_spinner_item);
+// Specify the layout to use when the list of choices appears
+        genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+        genderSpinner.setAdapter(genderAdapter);
     }
 
     private void editProfileValues() {
