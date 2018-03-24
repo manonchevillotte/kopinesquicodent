@@ -16,6 +16,10 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -96,6 +100,11 @@ public class MainActivity extends AppCompatActivity
 
     private void updateInterface() {
 
+
+
+        Date currentTime = Calendar.getInstance().getTime();
+        mDateRefreshTxtView.setText(new SimpleDateFormat("dd/MM/yyyy HH:mm",Locale.FRANCE).format(currentTime));
+
         DecimalFormat numberFormat = new DecimalFormat("#.0");
         mWeightTxtView.setText(numberFormat.format(mWeight));
 
@@ -116,6 +125,15 @@ public class MainActivity extends AppCompatActivity
         } else {
             mBMITxtView.setTextColor(getResources().getColor(R.color.nephritis_green_color));
         }
+
+        if (mOxygenRate >= 94){
+            mOxygenRateTxtView.setTextColor(getResources().getColor(R.color.nephritis_green_color));
+        } else if (mOxygenRate >= 90){
+            mBMITxtView.setTextColor(getResources().getColor(R.color.orange_orange_color));
+        } else {
+            mBMITxtView.setTextColor(getResources().getColor(R.color.alizarin_red_color));
+        }
+
 
     }
 
