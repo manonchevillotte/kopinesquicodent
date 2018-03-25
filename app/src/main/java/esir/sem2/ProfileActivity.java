@@ -14,6 +14,7 @@ public class ProfileActivity extends AppCompatActivity {
     private boolean isEditing;
     private Button confirmBtn;
     private FloatingActionButton editFab;
+    private Profile profileInstance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,23 +42,22 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        // Configure the athletic Spinner
         Spinner athleticSpinner = (Spinner) findViewById(R.id.athletic_value_profile);
-// Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> athleticAdapter = ArrayAdapter.createFromResource(this,
                 R.array.athletics_value_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
         athleticAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
         athleticSpinner.setAdapter(athleticAdapter);
 
+
+        // Configure the gender Spinner
         Spinner genderSpinner = (Spinner) findViewById(R.id.gender_value_profile);
-// Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,
                 R.array.gender_value_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
         genderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-// Apply the adapter to the spinner
         genderSpinner.setAdapter(genderAdapter);
+
+        profileInstance = Profile.newInstance();
     }
 
     private void editProfileValues() {
