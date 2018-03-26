@@ -38,7 +38,9 @@
             android:name=".TensionActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         >
-        <activity android:name=".CaloriesActivity"></activity>
+        <activity android:name=".CaloriesActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>

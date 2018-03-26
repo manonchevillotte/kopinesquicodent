@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 
 public class CaloriesActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -18,7 +19,6 @@ public class CaloriesActivity extends AppCompatActivity implements NavigationVie
         setContentView(R.layout.activity_calories);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_calories);
         setSupportActionBar(toolbar);
-
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
