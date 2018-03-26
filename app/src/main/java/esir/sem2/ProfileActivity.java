@@ -60,6 +60,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         // Configure the gender Spinner
+
         genderSpinner = (Spinner) findViewById(R.id.gender_value_profile);
         ArrayAdapter<CharSequence> genderAdapter = ArrayAdapter.createFromResource(this,
                 R.array.gender_value_array, android.R.layout.simple_spinner_item);
@@ -137,7 +138,6 @@ public class ProfileActivity extends AppCompatActivity {
             switcherAthletic.showPrevious();
             isEditing = !isEditing;
         }
-
     }
 
     private void saveProfile() {

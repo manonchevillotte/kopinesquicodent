@@ -18,6 +18,10 @@
             android:id="@+id/nav_weight"
             android:icon="@drawable/ic_weight_kilogram"
             android:title="@string/title_scale" />
+        <item
+            android:id="@+id/nav_calories"
+            android:icon="@drawable/ic_calories"
+            android:title="@string/title_calories" />
     </group>
 
 

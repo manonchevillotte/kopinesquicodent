@@ -10,6 +10,7 @@
     <string name="title_bmi">Indice de Masse Corporelle (IMC)</string>
     <string name="title_blood_pressure">Tension Artérielle</string>
     <string name="title_scale">Balance</string>
+    <string name="title_calories">Actimètre</string>
     <string name="main_title_2">Voici vos dernières mesures : </string>
     <string name="main_title_1">Bonjour</string>
     <string name="weight_unit">Kg</string>
@@ -20,6 +21,7 @@
     <string name="blood_pressure_dya_reduce">Dya</string>
     <string name="blood_pressure_pulse">Pouls</string>
     <string name="oxygen_rate">Taux d\'oxygène</string>
+    <string name="calories">Calories</string>
 
     <string name="title_activity_profile">profileActivity</string>
     <string name="large_text">
@@ -127,5 +129,6 @@
     <string name="plot_month_sel">Mois</string>
     <string name="plot_week_sel">Semaine</string>
     <string name="dernieremesure_text">Denière mesure :</string>
+    <string name="caloriestoday_text">Calories brulées aujourd'hui :</string>
 
 </resources>

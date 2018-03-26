@@ -191,6 +191,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_weight) {
             activity = new Intent(MainActivity.this,BMIActivity.class);
             startActivity(activity);
+        } else if (id == R.id.nav_calories) {
+            Intent profileActivity = new Intent(MainActivity.this,CaloriesActivity.class);
+            startActivity(profileActivity);
         } else if (id == R.id.nav_setting) {
             Intent profileActivity = new Intent(MainActivity.this,ProfileActivity.class);
             startActivity(profileActivity);

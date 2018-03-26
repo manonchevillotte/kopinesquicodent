@@ -45,6 +45,9 @@ public class OximeterActivity extends AppCompatActivity implements NavigationVie
         } else if (id == R.id.nav_weight) {
             activity = new Intent(OximeterActivity.this,BMIActivity.class);
             startActivity(activity);
+        } else if (id == R.id.nav_calories) {
+            Intent profileActivity = new Intent(OximeterActivity.this,CaloriesActivity.class);
+            startActivity(profileActivity);
         } else if (id == R.id.nav_setting) {
             activity = new Intent(OximeterActivity.this,ProfileActivity.class);
             startActivity(activity);
