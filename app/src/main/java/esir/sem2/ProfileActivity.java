@@ -88,7 +88,5 @@ public class ProfileActivity extends AppCompatActivity {
             switcherAthletic.showPrevious();
             isEditing = !isEditing;
         }
-
     }
-
 }
