@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity
     private TextView mUserGreetingsTxtView;
     private TextView mDateRefreshTxtView;
 
+    private Profile profileInstance;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +72,9 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
 
+        profileInstance = Profile.newInstance();
+
+
         mUserGreetingsTxtView = findViewById(R.id.profile_pseudo_main_greeting_main);
         mBMITxtView = findViewById(R.id.imc_Value_TxtView_main);
         mBdDyaTxtView = findViewById(R.id.bp_dya_val_main);
@@ -95,7 +100,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void initData() {
-        mUserGreetings = "Bonjour "+getResources().getText(R.string.profile_pseudo)+',';
+        mUserGreetings = "Bonjour "+profileInstance.getPseudo()+',';
     }
 
     private void updateInterface() {
