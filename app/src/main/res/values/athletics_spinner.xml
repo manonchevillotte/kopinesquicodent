@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="athletics_value_array">
-        <item>Oui</item>
         <item>Non</item>
+        <item>Oui</item>
     </string-array>
 </resources>

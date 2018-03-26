@@ -11,14 +11,14 @@ public class Profile {
     private static Profile instance;
     private String mPseudo;
     private int mAge,mHeight;
-    private boolean mIsAthletic;
+    private int mAthletic;
     private int mGender;
 
     private Profile() {
         this.mPseudo = "Pseudo";
         this.mAge = 18;
         this.mHeight = 180;
-        this.mIsAthletic = true;
+        this.mAthletic = 1;
         this.mGender = 1;
     }
 
@@ -57,12 +57,12 @@ public class Profile {
         this.mHeight = mHeight;
     }
 
-    public boolean isAthletic() {
-        return mIsAthletic;
+    public int getAthletic() {
+        return mAthletic;
     }
 
-    public void setAthletic(boolean mIsAthletic) {
-        this.mIsAthletic = mIsAthletic;
+    public void setAthletic(int mIsAthletic) {
+        this.mAthletic = mIsAthletic;
     }
 
     public int getGender() {
